@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1972 Iron Bowl</title>
+    <meta name="description" content="1972 Iron Bowl Audio Broadcast Recording by Gary Sanders. Famously known as Punt Bama Punt -- Auburn 17 Alabama 16">
+
+    <link rel="Shortcut Icon" href="{{ url_for('static', filename="img/favicon.ico") }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap.min.css") }}">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        #page-container {
+            padding-top: 40px;
+        }
+
+        #wrap {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -60px;
+        }
+
+        #push,
+        #footer {
+            height: 60px;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            #footer {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap-responsive.min.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/font-awesome.min.css") }}">
+
+    {% block style %}{% endblock %}
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33670860-2']);
+        _gaq.push(['_setDomainName', 'puntbamapunt.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+<body data-spy="scroll" data-target=".navbar">
+
+<div id="wrap">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand active" href="#">Punt Bama Punt</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li>
+                            <a href="#about">About the Game</a>
+                        </li>
+                        <li>
+                            <a href='#recordings'>Recordings</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href='http://www.payloadz.com/go/view_cart.asp?id_user=221275'><i class="icon-shopping-cart icon-white"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="push"></div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="muted">&copy; Punt Bama Punt 2013</p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename="js/jquery-1.9.1.min.js") }}"></script>
+<script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
+
+{% block js %}{% endblock %}
+
+</body>
+</html>
+
+
+
+
+
